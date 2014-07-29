@@ -9,6 +9,8 @@ fastqc *.fq.gz --threads 8 --outdir fastqc
 
 ## Trim adapters with Trimmomatic
 
+Use the script [here](https://gist.github.com/Blahah/7647b6b8ab908eb7f064/57acc64e02543413c28cbd8929c3cc6de5794f97).
+
 `reads.txt`:
 ```
 140710_I607_FCC4TB2ACXX_L1_Index12_1.fq.gz
@@ -60,7 +62,7 @@ $ ./trim/trim-batch.rb --pairedfile reads2.txt --jar /applications/trimmomatic/T
 
 ## Run eXpress on all samples
 
-used script at: https://gist.github.com/Blahah/9a22945529633b36a6f6/c5b5967638674885e4304b438d30eb83ff3b8297
+Use the script [here](https://gist.github.com/Blahah/9a22945529633b36a6f6/c5b5967638674885e4304b438d30eb83ff3b8297).
 
 trimmed.csv (for now we don't group samples or conditions:
 
