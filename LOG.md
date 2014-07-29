@@ -40,7 +40,7 @@ fastqc *.fq.gz --threads 8 --outdir fastqc
 run trimmomatic...
 
 ```bash
-$ $ ./trim/trim-batch.rb --pairedfile reads.txt --jar /applications/trimmomatic/Trimmomatic-0.32/trimmomatic-0.32.jar --adapters /applications/trimmomatic/Trimmomatic-0.32/trimmomatic-0.32.jar --threads 16 --phred 64 | tee trim2.log
+$ ./trim/trim-batch.rb --pairedfile reads.txt --jar /applications/trimmomatic/Trimmomatic-0.32/trimmomatic-0.32.jar --adapters /applications/trimmomatic/Trimmomatic-0.32/trimmomatic-0.32.jar --threads 16 --phred 64 | tee trim2.log
 ```
 
 reads2.txt for files that need to be re-run:
@@ -54,7 +54,7 @@ reads2.txt for files that need to be re-run:
 
 re-run for missing files:
 
-```
+```bash
 $ ./trim/trim-batch.rb --pairedfile reads2.txt --jar /applications/trimmomatic/Trimmomatic-0.32/trimmomatic-0.32.jar --adapters /applications/trimmomatic/Trimmomatic-0.32/trimmomatic-0.32.jar --threads 16 --phred 64 | tee trim2.log
 ```
 
@@ -116,5 +116,5 @@ trim/^tu.140710_I607_FCC4TB2ACXX_L1_Index7_2.fq,1,12,3
 ```
 
 ```bash
-rds45@node8:/tmp/rds45$ ./express.rb --reads trimmed.csv --fasta Creinhardtii_281_v5.5.transcript.fa --path express --output express_summary.txt -k 10
+$ ./express.rb --reads trimmed.csv --fasta Creinhardtii_281_v5.5.transcript.fa --path express --output express_summary.txt -k 10
 ```
